@@ -1,0 +1,29 @@
+.userprofile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    margin-right: 25px;
+    }
+
+    .cartprofile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        margin-right: 25px;
+        position: relative;
+    }
+
+    .personalprofile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+    }
