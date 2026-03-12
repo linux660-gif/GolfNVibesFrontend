@@ -1,29 +1,128 @@
-.userprofile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
-    margin-right: 25px;
-    }
 
-    .cartprofile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #f0f0f0;
-        margin-right: 25px;
-        position: relative;
-    }
+.modern-nav {
+    padding: 1rem 2rem;
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    .personalprofile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-    }
+.modern-nav .nav-link:hover {
+    color: #28a745 !important; 
+    transform: translateY(-9px) scale(1.15) !important;
+    
+}
+
+.modern-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #28a745;
+    visibility: hidden;
+    transition: width 0.3s ease;
+}
+
+.modern-nav .nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.brand-logo {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff !important;
+}
+
+.vibe-text {
+    color: #28a745; 
+}
+
+
+.nav-link-ltr {
+    position: relative;
+    color: rgba(255,255,255,0.8) !important;
+    margin: 0 10px;
+}
+
+
+
+.nav-link-ltr:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.custom-dropdown .dropdown-menu {
+    margin-top: 0; 
+    border-radius: 8px;
+    background: rgba(20, 20, 20, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block; 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+
+.dropdown-item {
+    color: #fff !important;
+    padding: 10px 20px;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #28a745 !important; /* Golf Green */
+    color: white !important;
+}
+
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.personalprofile {
+    gap: 15px;
+}
+
+.nav-icon {
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: white;
+}
+
+.nav-icon:hover {
+    transform: scale(1.2);
+    color: #28a745;
+}
+
+.login-btn {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.signup-btn {
+    border-radius: 25px;
+    padding: 8px 25px !important;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    transform: translateY(-2px);
+}

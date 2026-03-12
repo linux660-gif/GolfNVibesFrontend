@@ -1,4 +1,7 @@
+import CarouselComponent from "./assets/components/Carousel"
+import Footer from "./assets/components/Footer"
 import NavBar from "./assets/components/NavBar"
+import PastEventsCards from "./assets/components/PastEventsCards"
 
 
 function App() {
@@ -7,6 +10,10 @@ function App() {
   return (
     <>
       <NavBar />
+      <CarouselComponent />
+      <PastEventsCards />
+
+      <Footer />
     </>
   )
 }
