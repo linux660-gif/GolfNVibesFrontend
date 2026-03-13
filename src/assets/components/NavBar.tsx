@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
 //import { BsPersonCircle, BsCartCheckFill } from "react-icons/bs";
+
 import './NavBar.css';
 
 function NavBar() {
   const [showEvents, setShowEvents] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showSignUp, setShowSignUp] = useState(false);
 
   return (
     <Navbar expand="lg" variant="dark" className="fixed-top modern-nav bg-transparent">
@@ -17,7 +19,7 @@ function NavBar() {
 
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto mb-2 mb-lg-0">
-            <Nav.Link href="#" className="nav-link-ltr">Home</Nav.Link>
+            <Nav.Link href="https://google.com" className="nav-link-ltr">Home</Nav.Link>
             <NavDropdown
               title="Events"
               id="events-dropdown"
@@ -70,7 +72,7 @@ function NavBar() {
 
             <Nav.Link href="#" className="login-link">Login</Nav.Link>
             
-            <Nav.Item>
+            <Nav.Item onClick={() => setShowSignUp(true)}>
               <a href="#" className="btn btn-outline-light signup-btn ms-lg-3">
                 Sign Up
               </a>

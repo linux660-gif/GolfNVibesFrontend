@@ -1,0 +1,93 @@
+
+.hero-carousel-wrapper {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.carousel-video {
+  height: 90vh; 
+  object-fit: cover;
+  filter: brightness(0.5); 
+}
+
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.glass-caption-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: left;
+  max-width: 700px;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.vibe-text {
+  color: #28a745;
+}
+
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-outline-glass {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-glass:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #28a745; /* Matches your accent */
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .glass-caption-box { padding: 1.5rem; margin: 0 10px; }
+  .carousel-video { height: 70vh; }
+}

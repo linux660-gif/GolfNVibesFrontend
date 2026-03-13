@@ -1,0 +1,197 @@
+/* 1. Modal Wrapper & Backdrop */
+/* This overrides Bootstrap's default white box */
+.signup-modal-content {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* This dims the background video slightly more and adds blur */
+.custom-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* 2. The Glass Card (Popup) */
+.signup-card.modal-version {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    background: rgba(18, 18, 18, 0.95); /* Deep dark for contrast over videos */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    font-family: 'Inter', sans-serif;
+}
+
+/* 3. Close Icon Customization */
+.close-x {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.close-x:hover {
+    color: #28a745; /* Your Golf Green */
+}
+
+/* 4. Brand & Typography */
+.signup-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none !important;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.signup-logo {
+    height: 32px;
+}
+
+.signup-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 5. Inputs & Forms */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.4rem;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.signup-input:focus {
+    outline: none;
+    border-color: #28a745;
+    background: rgba(40, 167, 69, 0.05);
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.15);
+}
+
+/* 6. Action Button */
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* 7. Social Login Section */
+.social-divider {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
+
+.social-divider::before, .social-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.social-divider span { padding: 0 10px; }
+
+.social-group {
+    display: flex;
+    gap: 12px;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+}
+
+/* 8. Checkbox & Terms */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+}
+
+.checkbox-container a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+/* 9. Footer Link */
+.login-link-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 1rem;
+}
+
+.login-link-text a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: 600;
+}

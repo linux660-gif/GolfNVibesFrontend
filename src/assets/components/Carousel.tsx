@@ -1,44 +1,64 @@
-import Carousel from 'react-bootstrap/Carousel';
-//import './Carousel.css'
+import { Carousel, Container } from 'react-bootstrap';
+import './Carousel.css';
 
-function CarouselComponent() {
+const HERO_SLIDES = [
+  {
+    id: 1,
+    video: "golfhitting.mp4",
+    title: <>MASTER YOUR <span className="vibe-text">SWING</span></>,
+    description: "Data-driven insights to lower your handicap and increase your drive distance.",
+    cta: "Start Analysis"
+  },
+  {
+    id: 2,
+    video: "golf_in_target.mp4",
+    title: <>PRECISION <span className="vibe-text">PUTTING</span></>,
+    description: "Every inch counts. Master the green with our advanced targeting technology.",
+    cta: "Explore Clinics"
+  }
+];
+
+const CarouselComponent = () => {
   return (
-    <Carousel>
-      <Carousel.Item interval={5000}>
-        <video className="d-block w-100" controls loop autoPlay muted>
-          <source src="golfhitting.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <Carousel.Caption>
-          <h3>Video Slide Label</h3>
-          <p>Description for the video slide.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      {/*<Carousel.Item interval={2000}>
-        <img
-          className="d-block w-100"
-          src="golf_into_target.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>Image Slide Label</h3>
-          <p>Description for the image slide.</p>
-        </Carousel.Caption>
-      </Carousel.Item>*/}
+    <section className="hero-carousel-wrapper">
+      <Carousel 
+        fade 
+        indicators={true} 
+        interval={6000} 
+        pause={false}
+        className="modern-carousel"
+      >
+        {HERO_SLIDES.map((slide) => (
+          <Carousel.Item key={slide.id}>
+            <div className="carousel-overlay"></div>
+            
+            <video 
+              className="d-block w-100 carousel-video" 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+            >
+              <source src={slide.video} type="video/mp4" />
+            </video>
 
-      
-       <Carousel.Item interval={5000}>
-        <video className="d-block w-100" controls loop autoPlay muted>
-          <source src="golf_in_target.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <Carousel.Caption>
-          <h3>Video Slide Label</h3>
-          <p>Description for the video slide.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+            <Carousel.Caption>
+              <Container>
+                <div className="glass-caption-box">
+                  <h1 className="hero-title">{slide.title}</h1>
+                  <p className="hero-description">{slide.description}</p>
+                  <div className="hero-actions">
+                    <button className="signup-btn btn btn-success">{slide.cta}</button>
+                    <button className="btn-outline-glass">Learn More</button>
+                  </div>
+                </div>
+              </Container>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </section>
   );
-}
+};
 
 export default CarouselComponent;
