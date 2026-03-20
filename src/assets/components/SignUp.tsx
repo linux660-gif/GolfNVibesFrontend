@@ -19,7 +19,6 @@ export default function SignUpModal({ show, onHide }: SignUpModalProps) {
       backdropClassName="custom-modal-backdrop"
     >
       <div className="signup-card modal-version">
-        {/* Close Icon */}
         <button className="close-x" onClick={onHide}>&times;</button>
 
         <a href="/" className="signup-logo-link">
