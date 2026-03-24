@@ -10,7 +10,7 @@ function NavBar() {
   const [showSignUp, setShowSignUp] = useState(false);
 
   return (
-    <Navbar expand="lg" variant="dark" className="fixed-top modern-nav bg-transparent">
+    <Navbar expand="lg" variant="dark" className="fixed-top navbar bg-transparent">
       <Container fluid>
         <Navbar.Brand href="#" className="brand-logo">
           Golf <span className="vibe-text">N</span> Vibes
@@ -26,7 +26,7 @@ function NavBar() {
               show={showEvents}
               onMouseEnter={() => setShowEvents(true)}
               onMouseLeave={() => setShowEvents(false)}
-              className="custom-dropdown"
+              className="dropdown"
             >
               <NavDropdown.Item href="#">Morocco</NavDropdown.Item>
               <NavDropdown.Item href="#">Kenya</NavDropdown.Item>
@@ -42,7 +42,7 @@ function NavBar() {
               show={showAbout}
               onMouseEnter={() => setShowAbout(true)}
               onMouseLeave={() => setShowAbout(false)}
-              className="custom-dropdown"
+              className="dropdown"
             >
               <NavDropdown.Item href="#">Our Story</NavDropdown.Item>
               <NavDropdown.Item href="#">Our Team</NavDropdown.Item>

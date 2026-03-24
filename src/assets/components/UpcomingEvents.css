@@ -1,0 +1,159 @@
+.upcoming-events {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+.upcoming-events-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.upcoming-events-title {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.upcoming-events-description {
+  color: #94a3b8;
+}
+
+.upcoming-events-countdown {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.upcoming-events-countdown div {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.upcoming-events-countdown span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.upcoming-events-details p {
+  margin: 5px 0;
+}
+
+.upcoming-events-attendees {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.upcoming-events-attendees img {
+  border-radius: 50%;
+  margin-right: -10px;
+  border: 2px solid #0f172a;
+}
+
+.upcoming-events-attendees span {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.upcoming-events-primary-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+.upcoming-events-image img {
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+
+.upcoming-events-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upcoming-events-modal-content {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  position: relative;
+}
+
+.upcoming-events-modal-content input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+}
+
+
+.upcoming-events-payments {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.upcoming-events-payments button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.upcoming-events-payments .active {
+  background: #38bdf8;
+}
+
+
+.upcoming-events-pay-btn {
+  width: 100%;
+  padding: 10px;
+  background: #22c55e;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+
+.upcoming-events-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+
+
+@media (max-width: 900px) {
+  .upcoming-events-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}

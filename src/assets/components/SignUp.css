@@ -1,22 +1,18 @@
-/* 1. Modal Wrapper & Backdrop */
-/* This overrides Bootstrap's default white box */
 .signup-modal-content {
     background: transparent !important;
     border: none !important;
 }
 
-/* This dims the background video slightly more and adds blur */
 .custom-modal-backdrop {
     background-color: rgba(0, 0, 0, 0.8) !important;
     backdrop-filter: blur(8px);
 }
 
-/* 2. The Glass Card (Popup) */
 .signup-card.modal-version {
     width: 100%;
     max-width: 440px;
     margin: 0 auto;
-    background: rgba(18, 18, 18, 0.95); /* Deep dark for contrast over videos */
+    background: rgba(18, 18, 18, 0.95); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -27,7 +23,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* 3. Close Icon Customization */
+
 .close-x {
     position: absolute;
     top: 20px;
@@ -42,10 +38,10 @@
 }
 
 .close-x:hover {
-    color: #28a745; /* Your Golf Green */
+    color: #28a745; 
 }
 
-/* 4. Brand & Typography */
+
 .signup-logo-link {
     display: flex;
     align-items: center;
@@ -70,7 +66,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* 5. Inputs & Forms */
+
 .signup-form {
     display: flex;
     flex-direction: column;
@@ -103,7 +99,7 @@
     box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.15);
 }
 
-/* 6. Action Button */
+
 .submit-btn {
     width: 100%;
     padding: 0.9rem;
@@ -124,7 +120,7 @@
     transform: translateY(-2px);
 }
 
-/* 7. Social Login Section */
+
 .social-divider {
     display: flex;
     align-items: center;
@@ -163,7 +159,7 @@
     transform: translateY(-2px);
 }
 
-/* 8. Checkbox & Terms */
+
 .checkbox-container {
     display: flex;
     align-items: center;
@@ -182,7 +178,7 @@
     text-decoration: underline;
 }
 
-/* 9. Footer Link */
+
 .login-link-text {
     text-align: center;
     font-size: 0.9rem;

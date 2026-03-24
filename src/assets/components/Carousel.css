@@ -13,7 +13,7 @@
 
 
 .carousel-overlay {
-  position: absolute;
+  position: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,7 +24,6 @@
     rgba(0, 0, 0, 0.2) 50%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  z-index: 1;
 }
 
 .glass-caption-box {
@@ -34,9 +33,11 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 3rem;
-  text-align: left;
+  text-align: center;
   max-width: 700px;
   animation: fadeInUp 0.8s ease-out forwards;
+  margin-left: 120px;
+  position: relative;
 }
 
 .hero-title {
@@ -83,7 +84,7 @@
   width: 40px;
   height: 4px;
   border-radius: 2px;
-  background-color: #28a745; /* Matches your accent */
+  background-color: #28a745; 
 }
 
 @media (max-width: 768px) {

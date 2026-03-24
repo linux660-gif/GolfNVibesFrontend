@@ -1,72 +1,119 @@
-import { useState } from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import "./Footer.css"
 
-const Footer = () => {
-  const [email, setEmail] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setEmail("");
-  };
 
-  return (
-    <footer className="bg-gradient-to-b from-gray-800 to-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-blue-400 transition">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Best Sellers</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Trending Now</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Sale Items</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Gift Cards</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Special Offers</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition">Membership</a></li>
+export default function Footer(){
+  return(
+    
+    <div className="footer">
+    <div className="container">
+      <footer className="py-5">
+        <div className="row">
+          <div className="col-6 col-md-2 mb-3 ">
+            <h5>Section</h5>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+              </li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">About Our Shop</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">Welcome to our premium shopping destination. We offer a curated selection of high-quality products, ensuring an exceptional shopping experience for our valued customers. Our commitment to excellence and customer satisfaction sets us apart in the market.</p>
-            <img
-              src="https://images.unsplash.com/photo-1633409361618-c73427e4e206?ixlib=rb-4.0.3"
-              alt="Company Logo"
-              className="h-10 w-auto mb-4"
-            />
+          <div className="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-6 col-md-2 mb-3">
+            <h5>Section</h5>
+            <ul className="nav flex-column">
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Home</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary"
+                  >Features</a
+                >
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">Pricing</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">FAQs</a>
+              </li>
+              <li className="nav-item mb-2">
+                <a href="#" className="nav-link p-0 text-body-secondary">About</a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div className="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label htmlFor="newsletter1" className="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="email"
+                  className="form-control"
+                  placeholder="Email address"
+                />
+                <button className="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaFacebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaInstagram size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaLinkedin size={24} />
-              </a>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-              <a href="#" className="hover:text-white transition">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition">Terms of Service</a>
-              <a href="#" className="hover:text-white transition">Cookie Settings</a>
-            </div>
-
-            <div className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Your Company. All rights reserved.
-            </div>
-          </div>
+        <div
+          className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+        >
+          <p>&copy; 2025 Company, Inc. All rights reserved.</p>
+          <ul className="list-unstyled d-flex">
+            <li className="ms-3">
+              <a className="link-body-emphasis" href="#" aria-label="Instagram"
+                ><svg className="bi" width="24" height="24">
+                  <use href="#instagram"></use></svg
+              ></a>
+            </li>
+            <li className="ms-3">
+              <a className="link-body-emphasis" href="#" aria-label="Facebook"
+                ><svg className="bi" width="24" height="24" aria-hidden="true">
+                  <use href="#facebook"></use></svg
+              ></a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    </div>
   );
-};
-
-export default Footer;
+}
