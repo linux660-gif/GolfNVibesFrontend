@@ -26,14 +26,15 @@ const CarouselComponent = () => {
         indicators={true} 
         interval={6000} 
         pause={false}
+        controls={false}
         className="modern-carousel"
       >
         {HERO_SLIDES.map((slide) => (
-          <Carousel.Item key={slide.id}>
+          <Carousel.Item key={slide.id} className="vh-100">
             <div className="carousel-overlay"></div>
             
             <video 
-              className="d-block w-100 carousel-video" 
+              className="carousel-video" 
               autoPlay 
               loop 
               muted 
@@ -42,13 +43,13 @@ const CarouselComponent = () => {
               <source src={slide.video} type="video/mp4" />
             </video>
 
-            <Carousel.Caption>
+            <Carousel.Caption className="d-flex align-items-center h-100">
               <Container>
-                <div className="glass-caption-box">
+                <div className="hero-content">
                   <h1 className="hero-title">{slide.title}</h1>
                   <p className="hero-description">{slide.description}</p>
                   <div className="hero-actions">
-                    <button className="signup-btn btn btn-success">{slide.cta}</button>
+                    <button className="btn-primary-golf">{slide.cta}</button>
                     <button className="btn-outline-glass">Learn More</button>
                   </div>
                 </div>

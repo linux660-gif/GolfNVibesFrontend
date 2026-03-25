@@ -1,0 +1,157 @@
+/* --- Bootstrap Wrapper Fixes --- */
+.login-modal-content {
+    background: transparent !important;
+    border: none !important;
+    /* This allows clicks to reach the elements behind the default modal box */
+    pointer-events: none !important; 
+}
+
+.custom-modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* --- The Card --- */
+.login-card.modal-version {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    background: rgba(18, 18, 18, 0.95); 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    font-family: 'Inter', sans-serif;
+    /* Re-enable pointer events so the card and its children are clickable */
+    pointer-events: auto !important; 
+    z-index: 10;
+}
+
+/* --- The Functional Close Button --- */
+.close-x {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none !important;
+    border: none !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 2.5rem !important;
+    line-height: 0.7;
+    cursor: pointer !important;
+    padding: 10px !important;
+    /* Force the highest priority layer */
+    z-index: 100 !important; 
+    pointer-events: auto !important; 
+    transition: all 0.2s ease;
+}
+
+.close-x:hover {
+    color: #28a745 !important;
+    transform: scale(1.1);
+}
+
+/* --- Branding & Typography --- */
+.login-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none !important;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 1.5rem;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Form Elements --- */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.input-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.4rem;
+    text-align: left;
+}
+
+.login-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: #28a745;
+    background: rgba(40, 167, 69, 0.05);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* --- Social Section --- */
+.social-divider {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.75rem;
+    margin: 1rem 0;
+}
+.social-divider::before, .social-divider::after {
+    content: ''; flex: 1; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.social-divider span { padding: 0 10px; }
+
+.social-group {
+    display: flex; gap: 12px;
+}
+.social-btn {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    padding: 0.75rem; background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px;
+    cursor: pointer;
+}
+
+/* --- Switch Link --- */
+.signup-link-text {
+    text-align: center; font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);
+}
+.switch-btn-link {
+    background: none; border: none; color: #28a745;
+    font-weight: 600; cursor: pointer; padding: 0;
+}
+.switch-btn-link:hover { text-decoration: underline; }

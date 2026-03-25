@@ -1,64 +1,128 @@
-.pasteventcard-container{
+.past-events-section {
+    padding: 100px 0;
+    background-color: #f8fafc; /* Subtle grey to separate from History section */
+}
+
+.pastcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* --- Entrance Animation --- */
+.pastcard-wrapper {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Modern "Bounce" curve */
+}
+
+.pastcard-wrapper.reveal-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- Card Design --- */
+.pastcard-custom {
+    border: none !important;
+    border-radius: 12px !important;
     overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pastcard-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Image Reveal Logic --- */
+.img-reveal-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-reveal-container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
 }
 
-
-.pastcard-play{
-    display: flex;
-    gap: 1rem;
-    animation: scroll 100s linear infinite;
-}
-
-.pastcard{
-    flex: 0 0 calc(25% - 1rem);
-}
-
-.pastcard:hover{
-    transform: scale(1.07);
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-    
-}
-
-.img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-
-.img-wrapper img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  transition: opacity 0.4s ease;
-}
-
-
-.default-img {
-  opacity: 1;
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .hover-img {
-  opacity: 0;
+    transform: scale(1.1); /* Slightly zoomed in for the hover image */
 }
 
-.img-wrapper:hover .default-img {
-  opacity: 0;
+.pastcard-custom:hover .hover-overlay {
+    opacity: 1;
 }
 
-.img-wrapper:hover .hover-img {
-  opacity: 1;
+.pastcard-custom:hover .default-img {
+    transform: scale(1.1);
+}
+
+/* --- Badge & Typography --- */
+.card-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(44, 62, 80, 0.8);
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.event-card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.event-card-text {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* --- Button Styling --- */
+.btn-learn-more {
+    background: transparent !important;
+    border: 1px solid #3498db !important;
+    color: #3498db !important;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 10px 20px !important;
+    transition: all 0.3s ease !important;
+    width: 100%;
+}
+
+.btn-learn-more:hover {
+    background: #3498db !important;
+    color: white !important;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+    .pastcard-grid {
+        grid-template-columns: 1fr;
+    }
 }

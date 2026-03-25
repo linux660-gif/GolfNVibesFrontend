@@ -6,20 +6,21 @@ import "./SignUp.css";
 
 interface SignUpModalProps {
   show: boolean;
-  onHide: () => void;
+  handleClose: () => void;
+  switchToLogin: () => void;
 }
 
-export default function SignUpModal({ show, onHide }: SignUpModalProps) {
+export default function SignUpModal({ show, handleClose, switchToLogin }: SignUpModalProps) {
   return (
     <Modal 
       show={show} 
-      onHide={onHide} 
+      onHide={handleClose} 
       centered 
       contentClassName="signup-modal-content"
       backdropClassName="custom-modal-backdrop"
     >
       <div className="signup-card modal-version">
-        <button className="close-x" onClick={onHide}>&times;</button>
+        <button className="close-x" onClick={handleClose}>&times;</button>
 
         <a href="/" className="signup-logo-link">
           <img className="signup-logo" src="/vite.svg" alt="logo" />
@@ -68,8 +69,15 @@ export default function SignUpModal({ show, onHide }: SignUpModalProps) {
               </button>
             </div>
 
-            <p className="login-link-text">
-              Already have an account? <a href="#">Login here</a>
+             <p className="login-link-text">
+              Don't have an account?{" "}
+              <button 
+                type="button" 
+                className="switch-btn-link" 
+                onClick={switchToLogin}
+              >
+                Sign Up
+              </button>
             </p>
           </form>
         </div>

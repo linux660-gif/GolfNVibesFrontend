@@ -1,29 +1,32 @@
-
-import  { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Statistics.css";
 
-// Counter hook
+// Enhanced Counter hook with Easing
 const useCountUp = (end: number, startAnimation: boolean) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     if (!startAnimation) return;
 
-    let start = 0;
-    const duration = 2000;
-    const increment = end / (duration / 16);
+    let startTime: number | null = null;
+    const duration = 2500; // 2.5 seconds for a premium feel
 
-    const counter = setInterval(() => {
-      start += increment;
-      if (start >= end) {
-        setCount(end);
-        clearInterval(counter);
-      } else {
-        setCount(Math.ceil(start));
+    const step = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      // Easing function: easeOutExpo
+      const easeOutProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+      
+      const currentCount = Math.floor(easeOutProgress * end);
+      setCount(currentCount);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(counter);
+    window.requestAnimationFrame(step);
   }, [end, startAnimation]);
 
   return count;
@@ -33,49 +36,52 @@ interface StatItemProps {
   icon: string;
   number: number;
   label: string;
+  suffix?: string;
   startAnimation: boolean;
 }
 
-const StatItem = ({ icon, number, label, startAnimation }: StatItemProps) => {
+const StatItem = ({ icon, number, label, suffix = "", startAnimation }: StatItemProps) => {
   const count = useCountUp(number, startAnimation);
 
   return (
-    <div className="stat-item">
-      <i className={`fa ${icon} stats-icon`}></i>
-      <h2 className="stat-number">{count}</h2>
-      <div className="stat-line"></div>
-      <p className="stat-text">{label}</p>
+    <div className={`stat-card ${startAnimation ? 'animate-in' : ''}`}>
+      <div className="icon-box">
+         <i className={`fa-solid ${icon}`}></i>
+      </div>
+      <div className="stat-info">
+        <h2 className="stat-number">
+          {count.toLocaleString()}{suffix}
+        </h2>
+        <p className="stat-label">{label}</p>
+      </div>
     </div>
   );
 };
 
 const Statistics = () => {
-  const ref = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-        }
+        if (entry.isIntersecting) setVisible(true);
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
-    if (ref.current) observer.observe(ref.current);
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="statistic" className="stat-section" ref={ref}>
-      <div className="stat-container">
+    <section className="statistics-wrapper" ref={sectionRef}>
+      <div className="container">
         <div className="stat-grid">
-          <StatItem icon="fa-coffee" number={999} label="Coffee Cups" startAnimation={visible} />
-          <StatItem icon="fa-code" number={10000} label="Line Code" startAnimation={visible} />
-          <StatItem icon="fa-clock-o" number={6} label="Years Experience" startAnimation={visible} />
-          <StatItem icon="fa-laptop" number={12} label="Project" startAnimation={visible} />
+          <StatItem icon="fa-flag" number={450} label="Championship Courses" startAnimation={visible} />
+          <StatItem icon="fa-earth-africa" number={40} suffix="+" label="Global Destinations" startAnimation={visible} />
+          <StatItem icon="fa-users" number={15000} label="Happy Golfers" startAnimation={visible} />
+          <StatItem icon="fa-trophy" number={120} label="Major Tournaments" startAnimation={visible} />
         </div>
       </div>
     </section>
@@ -83,4 +89,3 @@ const Statistics = () => {
 };
 
 export default Statistics;
-

@@ -1,4 +1,3 @@
-
 import { Modal } from 'react-bootstrap';
 import { FcGoogle } from "react-icons/fc";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
@@ -7,10 +6,10 @@ import "./LogIn.css";
 interface LogInModalProps {
   show: boolean;
   onHide: () => void;
+  onSwitch: () => void; 
 }
 
-export default function LogInpModal({ show, onHide }: 
-LogInModalProps) {
+export default function LogInpModal({ show, onHide, onSwitch }: LogInModalProps) {
   return (
     <Modal 
       show={show} 
@@ -20,7 +19,18 @@ LogInModalProps) {
       backdropClassName="custom-modal-backdrop"
     >
       <div className="login-card modal-version">
-        <button className="close-x" onClick={onHide}>&times;</button>
+        {/* Close button - now with stopPropagation to ensure it triggers cleanly */}
+        <button 
+          className="close-x" 
+          onClick={(e) => {
+            e.stopPropagation();
+            onHide();
+          }} 
+          type="button" 
+          aria-label="Close"
+        >
+          &times;
+        </button>
 
         <a href="/" className="login-logo-link">
           <img className="login-logo" src="/vite.svg" alt="logo" />
@@ -41,8 +51,6 @@ LogInModalProps) {
               <input type="password" className="login-input" placeholder="••••••••" required />
             </div>
 
-
-
             <button type="submit" className="submit-btn">Log In</button>
 
             <div className="social-divider"><span>Continue with</span></div>
@@ -60,7 +68,14 @@ LogInModalProps) {
             </div>
 
             <p className="signup-link-text">
-              Create an Account with us today? <a href="#">Sign Up</a>
+              Don't have an account?{" "}
+              <button 
+                type="button" 
+                className="switch-btn-link" 
+                onClick={onSwitch}
+              >
+                Sign Up
+              </button>
             </p>
           </form>
         </div>

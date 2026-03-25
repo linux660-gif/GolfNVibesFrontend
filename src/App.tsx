@@ -1,4 +1,4 @@
-import AboutCard from "./assets/components/About";
+import AboutCard from "./assets/components/GolfResorts";
 import CarouselComponent from "./assets/components/Carousel";
 import HistoryCard from "./assets/components/History";
 import Footer from "./assets/components/Footer";

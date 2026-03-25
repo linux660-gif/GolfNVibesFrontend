@@ -1,159 +1,238 @@
-.upcoming-events {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #020617, #0f172a);
-  color: white;
+/* --- SECTION 1: HERO BANNER --- */
+.upcoming-hero {
+    padding: 30px 15px;
+    background: #ffffff;
 }
 
-.upcoming-events-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
+.hero-banner-container {
+    height: 620px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 0.8s ease-in-out;
 }
 
-.upcoming-events-title {
-  font-size: 36px;
-  margin-bottom: 15px;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 6%;
 }
 
-.upcoming-events-description {
-  color: #94a3b8;
+.hero-content-wrapper {
+    max-width: 900px;
+    color: #ffffff;
 }
 
-.upcoming-events-countdown {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
+.location-subtitle {
+    font-family: 'Playfair Display', serif; /* Script-like serif */
+    font-size: 3.2rem;
+    margin-bottom: -5px;
+    font-style: italic;
+    color: #ffffff;
 }
 
-.upcoming-events-countdown div {
-  background: #1e293b;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
+.main-hero-title {
+    font-size: clamp(3.5rem, 8.5vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: -4px;
+    margin-bottom: 30px;
 }
 
-.upcoming-events-countdown span {
-  font-size: 20px;
-  font-weight: bold;
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
 }
 
-.upcoming-events-details p {
-  margin: 5px 0;
+.feature-tags span {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.upcoming-events-attendees {
-  display: flex;
-  align-items: center;
-  margin: 15px 0;
+.hero-footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-.upcoming-events-attendees img {
-  border-radius: 50%;
-  margin-right: -10px;
-  border: 2px solid #0f172a;
+.booking-urgency h3 { font-size: 2rem; font-weight: 300; margin-bottom: 5px; }
+.booking-urgency h2 { font-size: 4rem; font-weight: 800; margin: 0; line-height: 0.9; }
+.see-all { font-size: 0.9rem; margin-top: 10px; cursor: pointer; opacity: 0.8; }
+
+/* --- SECTION 2: PILL BUTTON --- */
+.book-now-pill {
+    background: #ffffff;
+    color: #0c1825; /* Navy matching button text */
+    border: none;
+    padding: 20px 60px;
+    font-weight: 900;
+    border-radius: 100px; /* Perfect pill */
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.upcoming-events-attendees span {
-  margin-left: 10px;
-  font-size: 14px;
+.book-now-pill:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-.upcoming-events-primary-btn {
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: linear-gradient(135deg, #22c55e, #16a34a);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+/* --- SECTION 3: CHECKOUT MODAL UI --- */
+.checkout-modal .modal-content {
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
 }
 
-
-.upcoming-events-image img {
-  width: 100%;
-  border-radius: 20px;
-  transition: 0.4s;
+.checkout-summary-sidebar {
+    background: #0f172a;
+    color: #fff;
+    padding: 45px 35px;
 }
 
-
-.upcoming-events-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.event-mini-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 25px;
 }
 
-.upcoming-events-modal-content {
-  background: #0f172a;
-  padding: 30px;
-  border-radius: 16px;
-  width: 300px;
-  position: relative;
+.event-mini-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
 }
 
-.upcoming-events-modal-content input {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-  background: #1e293b;
-  color: white;
+.trust-badge {
+    background: rgba(34, 197, 94, 0.1);
+    color: #4ade80;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-
-.upcoming-events-payments {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
+.step-indicator {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
 }
 
-.upcoming-events-payments button {
-  flex: 1;
-  padding: 8px;
-  border: none;
-  border-radius: 8px;
-  background: #1e293b;
-  color: white;
-  cursor: pointer;
+.step-indicator.active { background: #2563eb; color: #fff; }
+.step-indicator.done { background: #22c55e; color: #fff; }
+
+.step-line { flex: 1; height: 3px; background: #f1f5f9; margin: 0 10px; }
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 
-.upcoming-events-payments .active {
-  background: #38bdf8;
-}
-
-
-.upcoming-events-pay-btn {
-  width: 100%;
-  padding: 10px;
-  background: #22c55e;
-  border: none;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-
-.upcoming-events-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
-  color: white;
-  border: none;
-  font-size: 18px;
-}
-
-
-@media (max-width: 900px) {
-  .upcoming-events-container {
-    grid-template-columns: 1fr;
+.method-card {
+    border: 2px solid #f1f5f9;
+    padding: 25px 10px;
+    border-radius: 20px;
+    cursor: pointer;
     text-align: center;
-  }
+    transition: 0.2s;
 }
+
+.method-card.selected {
+    border-color: #2563eb;
+    background: #f0f7ff;
+}
+
+.method-card .icon { font-size: 1.8rem; color: #64748b; margin-bottom: 8px; }
+.method-card.selected .icon { color: #2563eb; }
+
+.checkout-input-lg {
+    height: 65px !important;
+    font-size: 1.5rem !important;
+    text-align: center;
+    letter-spacing: 5px;
+    font-weight: 800 !important;
+    background: #f0f9ff !important;
+    border: 2px solid #bae6fd !important;
+}
+
+.btn-checkout-action {
+    background: #1e293b;
+    border: none;
+    padding: 18px !important;
+    border-radius: 15px !important;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+}
+
+.success-summary-box {
+    background: #f8fafc;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.close-x-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #f1f5f9;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Animations */
+.fade-in { animation: fadeIn 0.4s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Controls */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+}
+.slider-arrow.left { left: 30px; }
+.slider-arrow.right { right: 30px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+.slider-dots span { width: 14px; height: 14px; border: 2px solid #fff; border-radius: 50%; cursor: pointer; }
+.slider-dots span.active { background: #fff; width: 40px; border-radius: 10px; }
