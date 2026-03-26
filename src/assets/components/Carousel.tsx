@@ -5,16 +5,16 @@ const HERO_SLIDES = [
   {
     id: 1,
     video: "golfhitting.mp4",
-    title: <>MASTER YOUR <span className="vibe-text">SWING</span></>,
-    description: "Data-driven insights to lower your handicap and increase your drive distance.",
-    cta: "Start Analysis"
+    title: <>YOU PLAY <span className="vibe-text"><i>GOLF</i></span></>,
+    description: "From the first email to the 19th hole, we handle every detail so you focus on the game. We create custom golf trips for groups of all sizes, from buddies' weekends to corporate retreats.",
+    cta: "BOOK YOUR TRIP"
   },
   {
     id: 2,
     video: "golf_in_target.mp4",
-    title: <>PRECISION <span className="vibe-text">PUTTING</span></>,
-    description: "Every inch counts. Master the green with our advanced targeting technology.",
-    cta: "Explore Clinics"
+    title: <>WE HANDLE <span className="vibe-text"><i>EVERYTHING ELSE</i></span></>,
+    description: "We handle every detail — tee times, accommodations, logistics — so your group shows up ready to play. From buddies' weekends to corporate retreats.",
+      cta: "SPEAK TO AN EXPERT"
   }
 ];
 

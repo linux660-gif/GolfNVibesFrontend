@@ -19,8 +19,7 @@ export default function LogInpModal({ show, onHide, onSwitch }: LogInModalProps)
       backdropClassName="custom-modal-backdrop"
     >
       <div className="login-card modal-version">
-        {/* Close button - now with stopPropagation to ensure it triggers cleanly */}
-        <button 
+         <button 
           className="close-x" 
           onClick={(e) => {
             e.stopPropagation();
@@ -33,9 +32,7 @@ export default function LogInpModal({ show, onHide, onSwitch }: LogInModalProps)
         </button>
 
         <a href="/" className="login-logo-link">
-          <img className="login-logo" src="/vite.svg" alt="logo" />
-          FLOWBITE <span className="vibe-text">GOLF</span>
-        </a>
+          GOLF <span className="vibe-text">N</span> VIBES</a>
 
         <div className="login-content">
           <h1 className="login-title">Log In</h1>

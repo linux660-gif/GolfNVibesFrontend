@@ -22,10 +22,8 @@ export default function SignUpModal({ show, handleClose, switchToLogin }: SignUp
       <div className="signup-card modal-version">
         <button className="close-x" onClick={handleClose}>&times;</button>
 
-        <a href="/" className="signup-logo-link">
-          <img className="signup-logo" src="/vite.svg" alt="logo" />
-          FLOWBITE <span className="vibe-text">GOLF</span>
-        </a>
+        <a href="/" className="signup-logo-link">GOLF <span className="vibe-text">N</span>
+        VIBES</a>
 
         <div className="signup-content">
           <h1 className="signup-title">Create an account</h1>

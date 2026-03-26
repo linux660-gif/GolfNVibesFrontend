@@ -1,8 +1,6 @@
-/* --- Bootstrap Wrapper Fixes --- */
 .login-modal-content {
     background: transparent !important;
     border: none !important;
-    /* This allows clicks to reach the elements behind the default modal box */
     pointer-events: none !important; 
 }
 
@@ -11,7 +9,7 @@
     backdrop-filter: blur(8px);
 }
 
-/* --- The Card --- */
+
 .login-card.modal-version {
     width: 100%;
     max-width: 440px;
@@ -25,12 +23,17 @@
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     font-family: 'Inter', sans-serif;
-    /* Re-enable pointer events so the card and its children are clickable */
     pointer-events: auto !important; 
     z-index: 10;
 }
 
-/* --- The Functional Close Button --- */
+.login-card.modal-version:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 .close-x {
     position: absolute;
     top: 15px;
@@ -42,7 +45,6 @@
     line-height: 0.7;
     cursor: pointer !important;
     padding: 10px !important;
-    /* Force the highest priority layer */
     z-index: 100 !important; 
     pointer-events: auto !important; 
     transition: all 0.2s ease;
@@ -53,7 +55,6 @@
     transform: scale(1.1);
 }
 
-/* --- Branding & Typography --- */
 .login-logo-link {
     display: flex;
     align-items: center;
@@ -73,7 +74,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* --- Form Elements --- */
 .login-form {
     display: flex;
     flex-direction: column;
@@ -97,6 +97,12 @@
     border-radius: 12px;
     color: #ffffff;
     font-size: 1rem;
+}
+
+.login-input:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .login-input:focus {
@@ -123,7 +129,6 @@
     transform: translateY(-2px);
 }
 
-/* --- Social Section --- */
 .social-divider {
     display: flex;
     align-items: center;
@@ -146,7 +151,6 @@
     cursor: pointer;
 }
 
-/* --- Switch Link --- */
 .signup-link-text {
     text-align: center; font-size: 0.9rem; color: rgba(255, 255, 255, 0.5);
 }

@@ -1,6 +1,12 @@
 .signup-modal-content {
     background: transparent !important;
     border: none !important;
+
+}
+.signup-card.modal-version:hover{
+    transform: scale(1.02);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .custom-modal-backdrop {
@@ -17,10 +23,11 @@
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 28px;
-    padding: 2.5rem;
+    padding: 1.5rem;
     position: relative;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     font-family: 'Inter', sans-serif;
+    
 }
 
 
@@ -92,6 +99,12 @@
     transition: all 0.3s ease;
 }
 
+.signup-input:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
 .signup-input:focus {
     outline: none;
     border-color: #28a745;
@@ -113,6 +126,7 @@
     cursor: pointer;
     transition: transform 0.2s, background 0.3s ease;
     margin-top: 0.5rem;
+    font-size: 10px;
 }
 
 .submit-btn:hover {

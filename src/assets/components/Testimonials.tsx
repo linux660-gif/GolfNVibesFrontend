@@ -63,7 +63,8 @@ export default function Testimonials() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <h2 className="title-testimonials">What People Say</h2>
+      <h2 className="title-testimonials">Every Trip.Every Detail.Every Memory</h2>
+      <p className="subtitle-testimonials">We don't just book tee times — we create experiences that groups talk about for years.</p>
 
       <div className="carousel-testimonials">
         <div

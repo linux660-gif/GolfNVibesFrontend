@@ -10,6 +10,7 @@ import StatisticsCard from "./assets/components/Statistics";
 import TestmonialCard from "./assets/components/Testimonials";
 import UpcomingEventCards from "./assets/components/UpcomingEventsCards";
 import WhyChooseUs from "./assets/components/WhyChooseUs";
+import TripRequestForm from "./assets/components/TripRequestForm";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
     <WhyChooseUs />
     <UpcomingEventCards />
     <TestmonialCard />
+    <TripRequestForm />
     <Footer />
 
     </>

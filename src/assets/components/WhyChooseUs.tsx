@@ -20,27 +20,27 @@ const WhyChooseUs = () => {
       <h2 className="title">Why to choose US?</h2>
 
       <Feature
-        title="Simple integration"
-        text="Use the LocaleData gem to download translations directly into your Ruby on Rails projects using the provided command line interface. Just create a project and follow the step-by-step instructions."
+        title="Comprehensive range of golf packages"
+        text="We offer thousands of golf breaks across the UK and overseas, so there’s something for every player. From short weekend getaways to week-long trips, we match courses, accommodation and transfers to your schedule and budget. Tell us your dates and we’ll show you the best options."
         img="https://picsum.photos/400/240"
       />
 
       <Feature
-        title="Easy collaboration"
-        text="All LocaleData projects are private. Each project can have multiple collaborators with different roles and access permissions. You determine who can see and edit your translations."
+        title="Customised itineraries"
+        text="Tell us how you like to play and we’ll build your schedule around that. Whether you want coaching, group play or a relaxed social trip, we’ll organise transport, dining and tee times to suit."
         img="https://picsum.photos/400/240"
         reverse
       />
 
       <Feature
-        title="No more syntax errors"
-        text="LocaleData provides you easy import/export functions for your YAML files. Use a simple editor with many predefined languages to manage your locales."
+        title="Expert knowledge and support"
+        text="You come first. Our team knows courses, travel logistics and local tips, so you get clear advice every step of the way. We handle bookings, tee times and special requests and we’re only a call or email away if you want to talk through the plan."
         img="https://picsum.photos/400/240"
       />
 
       <Feature
-        title="Bulk editing"
-        text="Do you need to change the path of many translation keys at once? No problem, just use the bulk editing feature and enjoy the results."
+        title="Comprehensive range of packages"
+        text="Choose from packages at different price points to suit solo players, couples or groups. We aim for straightforward booking, clear communication and quick fixes if plans change. If something isn’t right, we will put it right."
         img="https://picsum.photos/400/240"
         reverse
       />
